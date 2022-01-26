@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 작성폼</title>
+</head>
+<style>
+    .layout {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .layout input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+    .layout textarea {
+        width: 100%;
+        margin-top: 10px;
+        min-height: 300px;
+    }
+</style>
+<body>
+<h1>이범기 SpringBoot 게시판 공부</h1>
+<div class="layout">
+    <form action="/board/writepro" method="post" enctype="multipart/form-data">  <!--파일 업로드를 위해서 enctype= "파일 업로드" 추가-->
+    <input name ="title" type="text"> <br>
+    <textarea name="content"></textarea><br>
+    <input type="file" name="file"><br>                                                       <!--파일 형태-->
+    <button type="submit"> 작성 </button>
+    </form>
+</div>
+</body>
+</html>
+
+
+
