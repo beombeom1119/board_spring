@@ -1,5 +1,18 @@
 .btn btn-warning{
 
-font-size:20px;
+font-size:24px;
+color: blue;
+}
 
+.navbar-brand{
+    margin-left: 0px;
+}
+
+.btn btn-outline-success{
+    width:120%;
+}
+
+.title_spring{
+    font-family: 'Jua', sans-serif;
+    color: blue;
 }

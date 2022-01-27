@@ -19,7 +19,6 @@ public class BoardService {
     @Autowired
     private BoardRepository boardRepository; //원래 객체 처리를 위해서 new를 사용해야하지만 Autowired를 통해서 자동으로 지정 가능하다.
 
-
         // 글 작성 처리
     public void write(Board board, MultipartFile file) throws Exception    //글 작성시 file을 추가하기 위해서 MultipartFile 추가
     {
@@ -56,18 +55,6 @@ public class BoardService {
         boardRepository.deleteById(id);     //번호에 맞게 삭제
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

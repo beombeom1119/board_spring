@@ -27,7 +27,6 @@ public class BoardController {
         return "boardwrite";
     }
 
-
     @PostMapping("/board/writepro")                       /// 해당 매개변수는 Entity를 통해 가져온다. //file 업로드를 위해서 MultipartFile 추가
     public String boardWritePro(Board board, Model model, MultipartFile file) throws Exception
     {
@@ -36,10 +35,6 @@ public class BoardController {
         model.addAttribute("searchUrl","/board/list");      // /board/list를 통해서 모델에 담겨서 message에 담겨진다.
         return "message";                             ///글 작성 후 메시지 출력
     }
-
-
-
-
 
     @GetMapping("/board/list")                          // 0 페이지에서 시작하고, id값을 기준으로 역순으로 10개의 글을 보여준다.
     public String boardList(Model model,
@@ -75,9 +70,6 @@ public class BoardController {
         return "boardview";
     }
 
-
-
-
     @GetMapping("/board/delete")    //위와 마찬가지로 ?id= * 하면 *의 값이 삭제되게 된다.
    public String boardDelete(Integer id)
     {
@@ -85,8 +77,6 @@ public class BoardController {
         return "redirect:/board/list";
 
     }
-
-
 
     @GetMapping("/board/modify/{id}")
     public String boardModify(@PathVariable("id") Integer id, Model model)  //PathVariable을 통해 URL을 통해 {id}를 인식하여 두번째 매개변수 안 id로 들어간다.
@@ -96,8 +86,7 @@ public class BoardController {
         model.addAttribute("searchUrl","/board/list");      // /board/list를 통해서 모델에 담겨서 message에 담겨진다.
         return "boardmodify";
     }
-
-
+    
     @PostMapping("/board/update/{id}")                          //수정을 위해 게시글 제목과 내용을 불러와야하기 때문에 BOARD를 가져온다.
     public String boardUpdate(@PathVariable("id") Integer id, Board board, Model model, MultipartFile file) throws Exception{
 

@@ -5,7 +5,7 @@
     <title>게시글 상세 페이지</title>
 </head>
 <body>
-
+<head th:replace="layouts/header.html :: head"></head><br/>
     <h1 th:text = "${board.title}">제목 입니다.</h1>
     <p th:text = "${board.content}">내용이 들어갈 부분입니다.</p>
     <img th:src="@{${board.filepath}}"/> <br/><br/>
@@ -16,6 +16,8 @@
     <button><a th:href="@{/board/modify/{id}(id=${board.id})}">글 수정</a></button>
         <!--타임리프를 이용하여 board.id 값을 받아온다.-->
 </body>
+<br/>
+<head th:replace="layouts/bottom.html :: bottom"></head>
 </html>
 
 
